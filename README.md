@@ -33,7 +33,10 @@ This will install all the required modules.
 ```server.js```.  
 
 #Use the extension  
-Just open the page of any comic or manga issue page(that means the issue of current manga or comic you are reading). Then just click on the extension and the files will be saved in the project directory.  
+Just open the page of any comic or manga issue page(that means the issue of current manga or comic you are reading). 
+Then just click on the extension and the files will be saved in the project directory.  
 
 #Current support
-The extension currently supports only two websites. They are readcomics.tv and mangapanda.com. Further crawlers will be created.  
+The extension currently supports only two websites. T
+hey are readcomics.tv and mangapanda.com. 
+Further crawlers will be created.  
