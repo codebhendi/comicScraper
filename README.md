@@ -23,14 +23,14 @@ A manga/comic scraper written in javascript
 1. You should have node and npm installed.  
 2. Go into the project directory.  
 3. Open you shell,terminal or whatever and type  
-```npm install```.   
+`npm install`.   
 This will install all the required modules.  
 4. If you want to keep this server running forever then you have to install forever.js. For that type in your terminal   
-```npm install -g forever```.  
+`npm install -g forever`.  
 5. If you have forever installed then type   
-```forever start server.js```.  
+`forever start server.js`.  
 6. If not then type node   
-```server.js```.  
+`server.js`.  
 
 #Use the extension  
 Just open the page of any comic or manga issue page(that means the issue of current manga or comic you are reading). 
