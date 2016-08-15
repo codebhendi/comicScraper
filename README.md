@@ -37,6 +37,5 @@ Just open the page of any comic or manga issue page(that means the issue of curr
 Then just click on the extension and the files will be saved in the project directory.  
 
 #Current support
-The extension currently supports only two websites. T
-hey are readcomics.tv and mangapanda.com. 
+The extension currently supports only two websites. They are readcomics.tv and mangapanda.com. 
 Further crawlers will be created.  
