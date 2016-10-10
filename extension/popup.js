@@ -38,6 +38,7 @@ function getCurrentTabUrl(callback) {
 }
 
 function renderStatus(statusText) {
+    console.log(statusText);
     document.getElementById('status').textContent = statusText;
 }
 
@@ -48,11 +49,21 @@ document.addEventListener('DOMContentLoaded', function() {
             mangapanda(url);
         } else if (url.match(/http:\/{2}www.readcomics.tv\/[0-9A-Za-z/-]+/g)) {
             readcomics(url);
+        } else if (url.match(/[a-z]+\.hentai\.ms\/manga\/[0-9A-Za-z\_\-]+/g)) {
+            mangaHentai(url); 
         } else {
             renderStatus("invalid page. Please open a proper comic page");    
         }
     });
 });
+
+function mangaHentai(url) {
+    var mangaName = url.match(/\/[0-9A-Za-z\_\-\(\) ]+/g);
+    var web = mangaName[0].replace('/', '');
+    mangaName = mangaName[2].replace('/', '');
+
+    sendRequest(mangaName, 0, web + ".hentai");
+}
 
 function mangapanda(url) {
     var mangaName = url.match(/\/[a-z0-9A-Z/-]+\//g);
@@ -97,10 +108,11 @@ function readcomics(url) {
 }
 
 function sendRequest(mangaName, issue, web) {
+    renderStatus(mangaName);
     var request = new XMLHttpRequest();
     var query = "name=" + mangaName + "&web=" + web + "&issue=" + issue;
-
-    request.open("get", "http://localhost:8081/scrape?" + query, true);
+    renderStatus(query);
+    request.open("get", "http://127.0.0.1:8081/scrape?" + query, true);
     request.send();
     request.onreadystatechange = getResponse;
 }

@@ -1,4 +1,4 @@
-{
+    {
   "name": "scraper",
   "version": "1.0.0",
   "description": "a tool to scrape website",
@@ -7,6 +7,7 @@
     "cheerio": "^0.20.0",
     "express": "^4.14.0",
     "fs": "0.0.2",
+    "html": "^1.0.0",
     "morgan": "^1.7.0",
     "request": "^2.74.0"
   },
